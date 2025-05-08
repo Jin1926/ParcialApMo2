@@ -40,7 +40,7 @@ public class Login extends AppCompatActivity {
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if((!txt_user.getText().toString().isEmpty()) || (!txt_pass.getText().toString().isEmpty())){
+                if((!txt_user.getText().toString().isEmpty()) && (!txt_pass.getText().toString().isEmpty())){
                     editor.putString("user", txt_user.getText().toString());
                     editor.commit();
                     Intent i = new Intent(Login.this, MainActivity.class);
